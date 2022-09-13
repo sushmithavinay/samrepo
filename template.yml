@@ -1,0 +1,21 @@
+AWSTemplateFormatVersion : '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Resources:
+  HelloWorldFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      Role: arn:aws:iam::586090826087:role/lambdabasicexecution
+  HelloWorld1Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      Role: arn:aws:iam::586090826087:role/lambdabasicexecution
+  HelloWorld2Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      Role: arn:aws:iam::586090826087:role/lambdabasicexecution  

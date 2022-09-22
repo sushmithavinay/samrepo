@@ -4,18 +4,18 @@ Resources:
   samtemplate1:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app1.lambda_handler
+      Handler: app.lambda_handler
       Runtime: python3.8
       Role: arn:aws:iam::406067944890:role/test-lambda
   samtemplate2:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app2.lambda_handler
+      Handler: app.lambda_handler
       Runtime: python3.8
       Role: arn:aws:iam::406067944890:role/test-lambda
   samtemplate3:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app3.lambda_handler
+      Handler: app.lambda_handler
       Runtime: python3.8
       Role: arn:aws:iam::406067944890:role/test-lambda      

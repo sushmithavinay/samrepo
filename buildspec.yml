@@ -4,4 +4,4 @@ phases:
     commands:
       - aws --version
       - sam package --template-file template.yml --output-template-file package.yml --s3-bucket my-bucket-flask
-      - sam deploy --template-file package.yml --stack-name sam-test-deploy --capabilities CAPABILITY_IAM
+      - sam deploy --template-file package.yml --stack-name sam --capabilities CAPABILITY_IAM

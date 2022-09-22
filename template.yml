@@ -1,19 +1,19 @@
 AWSTemplateFormatVersion : '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Resources:
-  HelloWorld1Function:
+  samtemplate1:
     Type: AWS::Serverless::Function
     Properties:
       Handler: app.lambda_handler
       Runtime: python3.8
       Role: arn:aws:iam::406067944890:role/test-lambda
-  HelloWorld2Function:
+  samtemplate2:
     Type: AWS::Serverless::Function
     Properties:
       Handler: app.lambda_handler
       Runtime: python3.8
       Role: arn:aws:iam::406067944890:role/test-lambda
-  HelloWorld3Function:
+  samtemplate3:
     Type: AWS::Serverless::Function
     Properties:
       Handler: app.lambda_handler

@@ -17,5 +17,5 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: app2.lambda_handler
-     Runtime: python3.7
+      Runtime: python3.7
       Role: arn:aws:iam::406067944890:role/test-lambda      

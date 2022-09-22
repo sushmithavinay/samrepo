@@ -13,9 +13,9 @@ Resources:
       Handler: index.handler
       Runtime: nodejs16.x
       Role: arn:aws:iam::406067944890:role/test-lambda
-  samtemplate3:
-    Type: AWS::Serverless::Function
-    Properties:
-      Handler: app.lambda_handler
-      Runtime: python2.7
-      Role: arn:aws:iam::406067944890:role/test-lambda      
+  #samtemplate3:
+   # Type: AWS::Serverless::Function
+    #Properties:
+     # Handler: app.lambda_handler
+     # Runtime: python2.7
+      #Role: arn:aws:iam::406067944890:role/test-lambda      

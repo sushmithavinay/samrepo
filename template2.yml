@@ -4,6 +4,6 @@ Resources:
   samtemplate2:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: index.handler
+      Handler: index2_naapi_automatio.handler
       Runtime: nodejs16.x
       Role: arn:aws:iam::406067944890:role/test-lambda

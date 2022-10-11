@@ -4,6 +4,6 @@ Resources:
   samtemplate3:
     Type: AWS::Serverless::Function
     Properties:
-      Handler: app2.lambda_handler
+      Handler: app2_naapi2_automation.lambda_handler
       Runtime: python3.7
       Role: arn:aws:iam::406067944890:role/test-lambda 

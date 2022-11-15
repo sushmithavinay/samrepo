@@ -7,10 +7,7 @@ Resources:
       Handler: app_naapi_automation.lambda_handler
       Runtime: python3.7
       Role: arn:aws:iam::406067944890:role/test-lambda
-   samtemplate2:
-    Type: AWS::Serverless::Function
-    Properties:
-      Handler: app_naapi_automation.lambda_handler
-      Runtime: python3.9
-      Role: arn:aws:iam::406067944890:role/test-lambda
+      CodeUri: ./LAMBDACODE/app_naapi_automation.py   
+
+
       

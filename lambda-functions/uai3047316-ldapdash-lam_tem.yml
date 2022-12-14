@@ -32,8 +32,8 @@ Resources:
       Runtime: python3.7
       FunctionName: !Sub ${UAI}-${AppName}-${Env}-Dashboard
       Role: arn:aws:iam::665129569626:role/uai3047316-LambdaRoleForOpenSearch
-     # Handler: opensearch_lambda.handler
-      Handler: opensearch-deployment-package.handler
+      Handler: opensearch_lambda.handler
+      #Handler: opensearch-deployment-package.handler
       Timeout: 900
     #  Code:
    #     S3Bucket: uai3047316-ladap-automation-s3-nonpr-ldaps3bucket-o8pynhngemrd

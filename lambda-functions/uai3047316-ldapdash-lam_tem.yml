@@ -8,6 +8,7 @@ Parameters:
     AllowedPattern: "uai[0-9]*"
     MinLength: 10
     MaxLength: 10
+    Default: uai3047316
   AppName:
     Description: "Appname"
     Type: String 

@@ -1,0 +1,52 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Lambda function for Dashboard.
+
+Parameters:
+  UAI:
+    Type: String
+    Description: "Universal Application Identifier(lowercase). Found at https://applications.ge.com"
+    AllowedPattern: "uai[0-9]*"
+    MinLength: 10
+    MaxLength: 10
+  AppName:
+    Description: "Appname"
+    Type: String 
+    Default: ldapdash
+  Env:
+    Description: "Environment"
+    Type: String
+    Default: nonprd
+
+Resources:
+  uai3047316daskboard:
+    Type: AWS::Lambda::Function
+    Properties:
+      Tags:
+        - Key: appname
+          Value: !Ref AppName
+        - Key: env
+          Value: !Ref Env
+        - Key: uai
+          Value: !Ref UAI
+      Runtime: python3.7
+      FunctionName: !Sub ${UAI}-${AppName}-${Env}-Dashboard
+      Role: arn:aws:iam::665129569626:role/uai3047316-LambdaRoleForOpenSearch
+      Handler: opensearch_lambda.handler
+      Timeout: 900
+      Code:
+        S3Bucket: uai3047316-ladap-automation-s3-nonpr-ldaps3bucket-o8pynhngemrd
+        S3Key: opensearch-deployment-package.zip  
+      Description: !Ref UAI
+
+  LambdaFunctionLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub ${UAI}-${AppName}-${Env}-dashboard
+      RetentionInDays: 30
+      Tags:
+        - Key: appname
+          Value: !Ref AppName
+        - Key: env
+          Value: !Ref Env
+        - Key: uai
+          Value: !Ref UAI

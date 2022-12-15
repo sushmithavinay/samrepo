@@ -29,7 +29,7 @@ Resources:
           Value: !Ref Env
         - Key: uai
           Value: !Ref UAI
-      Runtime: python3.8
+      Runtime: python3.7
       FunctionName: !Sub ${UAI}-${AppName}-${Env}-Dashboard
       #Role: arn:aws:iam::665129569626:role/uai3047316-LambdaRoleForOpenSearch
       Role: arn:aws:iam::406067944890:role/test-lambda
